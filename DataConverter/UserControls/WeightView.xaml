@@ -50,12 +50,12 @@
 
         </Grid.ColumnDefinitions>
 
-        <TextBox x:Name="measureInput" Grid.Column="0"></TextBox>
-        <ComboBox  Name="units" Grid.Column="1">Units</ComboBox>
-        <Button Grid.Column="2">Convert to</Button>
-        <ComboBox  Grid.Column="3">Units</ComboBox>
+        <TextBox x:Name="weightInput" Grid.Column="0"></TextBox>
+        <ComboBox  Name="initialUnits" Grid.Column="1"></ComboBox>
+        <Button Click="Button_Click" Grid.Column="2">Convert to</Button>
+        <ComboBox  Name="resultUnits" Grid.Column="3"></ComboBox>
       </Grid>
-      <TextBlock x:Name="resultText" HorizontalAlignment="Center" Margin="70" FontSize="18" FontWeight="Bold">Result</TextBlock>
+      <Label x:Name="resultText" HorizontalAlignment="Center" Margin="70" FontSize="18" FontWeight="Bold">Result</Label>
 
 
     </StackPanel>
