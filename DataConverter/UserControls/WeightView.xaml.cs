@@ -113,7 +113,15 @@ namespace DataConverter.UserControls
                             resultText.Content = String.Format("{0:0.##} {1}", initialAmount * 0.062499968700000005373, resultUnits.SelectedItem);
                             break;
                         case 2:
-                            resultText.Content = String.Format("{0:0.##} {1}", initialAmount * 0.0044642834785714293269, resultUnits.SelectedItem);
+                            if ((initialAmount * 0.0044642834785714293269) < 1)
+                            {
+                                resultText.Content = String.Format("{0} {1}", initialAmount * 0.0044642834785714293269, resultUnits.SelectedItem);
+
+                            }
+                            else
+                            {
+                                resultText.Content = String.Format("{0:0.##} {1}", initialAmount * 0.0044642834785714293269, resultUnits.SelectedItem);
+                            }
                             break;
                         case 3:
                             resultText.Content = String.Format("{0:0.##} {1}", initialAmount, resultUnits.SelectedItem);

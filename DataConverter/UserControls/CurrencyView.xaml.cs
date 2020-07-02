@@ -96,16 +96,40 @@ namespace DataConverter.UserControls
                     switch (resultCurrencies.SelectedIndex)
                     {
                         case 0:
-                            resultText.Content = String.Format("{0:0.##} {1}", initialAmount * 0.00830284, resultCurrencies.SelectedItem);
+                            if ((initialAmount * 0.00830284) < 1)
+                            {
+                                resultText.Content = String.Format("{0} {1}", initialAmount * 0.00830284, resultCurrencies.SelectedItem);
+                            }
+                            else
+                            {
+                                resultText.Content = String.Format("{0:0.##} {1}", initialAmount * 0.00830284, resultCurrencies.SelectedItem);
+                            }    
                             break;
                         case 1:
-                            resultText.Content = String.Format("{0:0.##} {1}", initialAmount * 0.00930268, resultCurrencies.SelectedItem);
+                            if ((initialAmount * 0.00930268) < 1)
+                            {
+                                resultText.Content = String.Format("{0} {1}", initialAmount * 0.00930268, resultCurrencies.SelectedItem);
+
+                            }
+                            else
+                            {
+                                resultText.Content = String.Format("{0:0.##} {1}", initialAmount * 0.00930268, resultCurrencies.SelectedItem);
+                            }
                             break;
                         case 2:
                             resultText.Content = String.Format("{0:0.##} {1}", initialAmount , resultCurrencies.SelectedItem);
                             break;
                         case 3:
-                            resultText.Content = String.Format("{0:0.##} {1}", initialAmount * 0.00749898, resultCurrencies.SelectedItem);
+                            if ((initialAmount * 0.00749898) < 1)
+                            {
+                                resultText.Content = String.Format("{0} {1}", initialAmount * 0.00749898, resultCurrencies.SelectedItem);
+
+                            }
+                            else
+                            {
+                                resultText.Content = String.Format("{0:0.##} {1}", initialAmount * 0.00749898, resultCurrencies.SelectedItem);
+
+                            }
                             break;
 
                         default:
